@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width">
+                <title>Monophonic Synthesiser</title>
+                <meta name="author" content="JackBrett" />
+                
+                <!-- Tone JS script -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/0.9.0/Tone.min.js" ></script>
+
+                <!-- Nexus UI script -->
+                <script src="https://rawgit.com/lsu-emdm/nexusUI/master/dist/nexusUI.js"></script>
+                
+                <!-- link to the css file -->
+                <link href="css/style.css" rel="stylesheet">
+                
+    </head>
+    <body>
+
+        <!-- Program description -->
+        <div id="description">Monophonic Synthesiser - Maximise window to optimise the space for the controls. Disable key repeat in system preferences to allow for sustained notes from the QWERTY keyboard. Have fun!
+        </div>
+    
+        <!-- Nexus UI canvas's in the controls area -->
+        <div id="controlsArea">
+
+            <!-- Nexus UI canvas's in the oscillator panel -->
+            <div id="oscPanel">
+                <div class="panelTitle">Oscillators</div>
+                <canvas label="Sine" id="oscOneSine" nx="slider"></canvas>
+                <canvas label="Square" id="oscTwoSquare" nx="slider"></canvas>
+                <canvas label="Sawtooth" id="oscThreeSawtooth" nx="slider"></canvas>
+                <canvas label="Detune" id="pitch" nx="dial"></canvas>
+            </div>
+
+            <!-- Nexus UI canvas's in the amplitude envelope panel -->
+            <div id="ampEnvPanel">
+                <div class="panelTitle">Amplitude envelope</div>
+                <canvas label="A" id="A" nx="dial"></canvas>
+                <canvas label="D" id="D" nx="dial"></canvas>
+                <canvas label="S" id="S" nx="dial"></canvas>
+                <canvas label="R" id="R" nx="dial"></canvas>
+            </div>
+
+            <!-- Nexus UI canvas's in the filter panel -->
+            <div id="filter">
+                <div class="panelTitle">Low-Pass Filter</div>
+                <canvas label="Cut Off" id="cutOff" nx="dial"></canvas>
+            </div>
+
+            <!-- Nexus UI canvas's in the fx panel -->
+            <div id="fx">
+                <div class="panelTitle">FX</div>
+                <canvas label="Reverb Amount" id="reverbDryWet" nx="dial"></canvas>
+                <canvas label="Delay Amount" id="delayDryWet" nx="dial"></canvas>
+                <canvas label="Delay Rate" id="delayRate" nx="dial"></canvas>
+                <canvas label="Delay Feedback" id="delayFeedback" nx="dial"></canvas>
+                <canvas label="Distortion Amount" id="distortionDryWet" nx="dial"></canvas>
+                <canvas label="Phaser Amount" id="phaserDryWet" nx="dial"></canvas>
+                <canvas label="Chorus Amount" id="chorusDryWet" nx="dial"></canvas>
+                <canvas label="Chorus Rate" id="chorusRate" nx="dial"></canvas>
+            </div>
+
+            <!-- Nexus UI canvas's in the backing track panel -->
+            <div id="backingTrack">
+                <div class="panelTitle">Backing Track</div>
+                <canvas label="Hip-Hop" id="hipHop" nx="toggle"></canvas>
+                <canvas label="Dubstep" id="dubstep" nx="toggle"></canvas>
+                <canvas label="House" id="house" nx="toggle"></canvas>
+                <canvas label="Jungle 1" id="jungle1" nx="toggle"></canvas>
+                <canvas label="Jungle 2" id="jungle2" nx="toggle"></canvas>
+                <canvas label="Drum n Bass" id="drumAndBass" nx="toggle"></canvas>
+                <canvas label="Track Vol" id="trackVolume" nx="dial"></canvas> 
+            </div>
+            
+            <!-- Nexus UI midi canvas-->
+            <canvas id="midiKeys" nx="keyboard"></canvas>
+
+            <!-- Nexus UI QWERTY keyboard canvas-->
+            <canvas id="qwertyKeys" nx="typewriter"></canvas>
+            
+            <!-- java script for the audio -->
+            <script src="synth-audio.js"></script>
+
+            <!-- java script for the user interface controls -->
+            <script src="synth-ui.js"></script>
+            
+    </body>
+    </html>

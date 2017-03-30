@@ -1,0 +1,120 @@
+/*Style sheet for the layout of the page*/
+
+/*Styleing the whole page*/
+body, html {
+    width: 100%;
+    height: 100%
+}
+
+/*Styleing the description*/
+div#description {
+    background-color: rgb(200,200,200);
+    font-family: sans-serif;
+    height: 5%;
+    width: 100%;
+}
+
+/*Styleing the controls area*/
+div#controlsArea {
+    height: 40%;
+    width: 100%;
+}
+
+/*Styleing the keyboard at the bottom*/
+#midiKeys {
+    height: 30%;
+    width: 100%;
+}
+
+/*Styleing the QWERTY keyboard as invisible*/
+#qwertyKeys {
+    display: none;
+    visibility: hidden;
+}
+
+/*Styleing the oscillator panel*/
+div#oscPanel {
+    width: 50%;
+    height: 70%;
+    float: left;
+    border-radius: 3px;
+    background-color : rgb(200,130,130)
+}
+
+/*Styleing the amplitude envelope panel*/
+div#ampEnvPanel {
+    width: 50%;
+    height: 70%;
+    float: right;
+    border-radius: 3px;
+    background-color : rgb(130,200,130)
+}
+
+/*Styleing the filter panel*/
+div#filter {
+    width: 25%;
+    height: 60%;
+    float: left;
+    border-radius: 3px;
+    background-color : rgb(200,130,200)
+}
+
+/*Styleing the fx panel*/
+div#fx {
+    width: 75%;
+    height: 60%;
+    float: left;
+    border-radius: 3px;
+    background-color : rgb(130,130,200)
+}
+
+/*Styleing the backing track panel*/
+div#backingTrack {
+    width: 100%;
+    height: 70%;
+    float: right;
+    background-color : rgb(100,300,200)
+}
+
+/*Styleing the nexus ui canvas objects in the fx panel*/
+div#fx>canvas{
+    width: 100px;
+    height: 100px;
+}
+
+/*Styleing the nexus ui canvas objects in the oscillator panel*/
+div#oscPanel>canvas{
+    width: 110px;
+    height: 60px;
+}
+
+/*Styleing the nexus ui canvas objects in the amplitude envelope panel*/
+div#ampEnvPanel>canvas{
+    width: 100px;
+    height: 100px;
+}
+
+/*Styleing the nexus ui canvas objects in the filter panel*/
+div#filter>canvas{
+    width: 150px;
+    height: 150px;
+}
+
+/*Styleing the nexus ui toggle objects in the backing track panel*/
+div#backingTrack>canvas[nx="toggle"]{
+    width: 10%;
+    height: 40%;
+}
+
+/*Styleing the nexus ui dial object in the backing track panel*/
+div#backingTrack>canvas[nx="dial"]{
+    width: 20%;
+    height: 50%;
+    float: right;
+}
+
+/*Styleing the nexus ui dial objects in the oscillator panel*/
+div#oscPanel>canvas[nx="dial"]{
+    width: 50%;
+    height: 50%;
+}
